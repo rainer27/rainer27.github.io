@@ -1,0 +1,62 @@
+---
+import Layout from '/Users/rainlasch/Desktop/Website/astro_files/src/layouts/BlogPost.astro';
+---
+
+<!-- the above is the Layout we have to import for the website page
+
+down below we have the layout which is what we'll be editing to build the site 
+-->
+
+<Layout
+	title="Photography"
+	description="Here is a collection of some of my photography showcasing the mountains of Colorado"
+	pubDate={new Date('April 20 2024')}
+	heroImage="/didier_and_me.JPG"
+>
+
+
+<li>
+	Hey there listers!
+</li>
+
+	<p>
+		This is a paragraph. 
+	</p>
+
+	<p>
+		This is another. 
+	</p>
+
+	<p>
+		Just a reminder. 
+	</p>
+
+	<p>
+		To add something meaningful here. 
+	</p>
+
+	<p>
+		Like more pictures? 
+	</p>
+
+	<p>
+		We'll just have to search around for ways to add photo blocks. 
+	</p>
+
+<h1 class = "text-4xl; text-gray-100">Search Photos</h1>
+<form class="grow w-full py-10">
+	<label class="block pb-2; text-gray-200" for="query"> Photo </label>
+	<input 
+	name="query"
+	type="text"
+	hx-get="/partials/users/results"
+	hx-trigger="keyup changed delay:500ms"
+	hx-target="#search-results"
+	placeholder="2019"
+	class="border border-gray-1 p-4 w-full rounded-xl focus:ring-rimary"
+	/>
+</form>
+<div class="pt-2 mb-6" id="search-results"></div>
+
+	
+</Layout>
